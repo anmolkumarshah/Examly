@@ -1,0 +1,33 @@
+server:
+  port: 8003
+
+
+spring:
+  application:
+    name: EXAM-SERVICE
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/examly
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
